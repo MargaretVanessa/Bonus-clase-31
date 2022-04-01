@@ -78,7 +78,7 @@ const actorsController = {
         
         db.Movie.findAll()
         .then(actors => {
-            res.render('actorsList.ejs', {actors})
+            res.render('actorsList.ejs')
        });  
     } 
 }

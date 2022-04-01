@@ -63,7 +63,7 @@ const moviesController = {
 
         db.Movie.findAll()
         .then(movies => {
-            res.render('moviesList.ejs', {movies})
+            res.render('moviesList.ejs')
        });     
     },
 
@@ -91,6 +91,7 @@ const moviesController = {
        });  
     }, 
 
+    
     'destroy':(req, res) =>{
         db.Movie.destroy({
             where:{id:req.params.id}
@@ -100,7 +101,8 @@ const moviesController = {
         .then(movies => {
             res.render('moviesList.ejs', {movies})
        });  
-    }      
+    }  
 }
+
 
 module.exports = moviesController;
